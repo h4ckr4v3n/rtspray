@@ -8,9 +8,9 @@ options:
 
   -h, --help    show this help message and exit
   
-  -l LIST, --list LIST     File containing target addresses. Format <ip> <port>
+  -l LIST, --list LIST     File containing target addresses. Format [ip] [port]
   
-  -t TARGET, --target TARGET    Target address. Format <ip>:<port>
+  -t TARGET, --target TARGET    Target address. Format [ip]:[port]
   
   -u USERNAME, --username USERNAME    Username or user_file
   
