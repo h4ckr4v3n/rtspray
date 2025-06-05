@@ -12,7 +12,7 @@ def check_rtsp_auth(ip, port, username, password):
     rtsp_url = f"rtsp://{username}:{password}@{ip}:{port}/"
     cap = cv2.VideoCapture(rtsp_url)
 
-    # Ждем несколько секунд для проверки соединения
+
     for _ in range(5):
         if not cap.isOpened():
             return False
@@ -41,11 +41,11 @@ def main():
         print("There is no target specified.")
         return
 
-    # Считываем пользователей и пароли
+
     usernames = read_file(args.username) if args.username and os.path.isfile(args.username) else [args.username]
     passwords = read_file(args.password) if args.password and os.path.isfile(args.password) else [args.password]
 
-    # Открываем файл для записи результатов
+
     with open('rtsp_auth_result.txt', 'w') as result_file:
         for ip_port in ip_ports:
             ip, port = ip_port.split(':') if ':' in ip_port else (ip_port.split()[0], 554)
